@@ -3,17 +3,15 @@
 
 char *proverb = "All that glisters is not gold.";
 
-void setPointer(char *q)
+void setPointer(char **q)
 {
-	q = proverb;
+    *q = proverb;
 }
 
 int main(void)
 {
-	
-	char *p = "zzz";
-	setPointer(p);
-	printf("%s \n", p);
-	
-	return 0;
+    char *p = "zzz";
+    setPointer(&p);
+    printf("%s\n", p);
+    return 0;
 }
