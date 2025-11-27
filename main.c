@@ -3,27 +3,21 @@
 
 int main(void)
 {
-    int i;
-    int grade[5];
-    int *p;
-    int sum = 0;
-
-    for (i = 0; i < 5; i++)
-    {
-        printf("input value[%d] = ", i);
-        scanf("%d", &grade[i]);
-    }
-
-    p = grade;
-
-    for (i = 0; i < 5; i++)
-    {
-        printf("grade[%d] = %d\n", i, *(p + i));
-        sum += *(p + i);
-    }
-
-    printf("average: %d\n", sum / 5);
-
+    char *pc;
+    int *pi;
+    double *pd;
+    
+    pc = (char *)10000;
+    pi = (int *)10000;
+    pd = (double *)10000;
+    
+    printf("before increasing: pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+    
+    pc++;
+    pi++;
+    pd++;
+    printf("after increasing: pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+    
     return 0;
+    
 }
-
