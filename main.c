@@ -3,21 +3,16 @@
 
 int main(void)
 {
-    char *pc;
-    int *pi;
-    double *pd;
-    
-    pc = (char *)10000;
-    pi = (int *)10000;
-    pd = (double *)10000;
-    
-    printf("before increasing: pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
-    
-    pc++;
-    pi++;
-    pd++;
-    printf("after increasing: pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
-    
-    return 0;
-    
+   int i = 100;
+   int *p = &i;
+   int **q = &p;
+   
+   *p = 200;
+   printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
+   
+   **q = 300;
+   printf("i = %d, *p = %d, **q = %d\n", i, *p, **q);
+   
+   return 0;
+
 }
